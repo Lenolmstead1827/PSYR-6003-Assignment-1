@@ -43,7 +43,7 @@ AV_SN_D<- AV_CE %>%
 
 View(AV_SN_D)### opening the new dataset to ensure it filtered correctly###
 
-write.csv(AV_SN_D, "avengers_nopowers_dead.csv") ## this saves the new dataset as a .csv file in my working directory##
+write_csv(AV_SN_D, "avengers_nopowers_dead.csv") ## this saves the new dataset as a .csv file in my working directory##
 
 library(haven) ## this package is needed to be able to create a .sav file###
 
@@ -113,4 +113,5 @@ stats <- escalc(measure = "SMD",
                 n2i = 780,
                 var.names = c("d","variance")) ### this calculates the effect size and 95% CI for the t-test, ti is the t-stat of 4.25, n1i is the sample size for those with superpowers, n2i is sample size for those without superpowers###
 summary(stats) ## this prints the stats###
+
 
